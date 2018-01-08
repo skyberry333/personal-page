@@ -1,0 +1,102 @@
+text-color = #000
+bg-color = #fff
+salmon-color = #E6A45E
+
+font-stack = Tiempos Text, Georgia, serif
+header-font-stack = Tiempos Headline, Georgia, serif
+
+logo-size = 56px
+mobile-padding = 24px
+tablet-padding = 48px
+desktop-padding = 96px
+
+
+// Media query shortcuts. above/below are inclusive/exclusive.
+mobile = 375px
+tablet = 768px
+desktop = 1024px
+
+above(w)
+  @media screen and (min-width: w)
+    {block}
+
+below(w)
+  @media screen and (max-width: w - 1)
+    {block}
+
+between(w1, w2)
+  @media screen and (min-width: w1) and (max-width: w2 - 1)
+    {block}
+
+text-h1()
+  background-image none  // override underline
+  font-family header-font-stack
+  font-size 40px
+  font-weight bold
+  line-height 44px
+  +between(mobile, tablet)
+    font-size 44px
+    line-height 44px
+  +above(tablet)
+    font-size 64px
+    line-height 68px
+    max-width 66%
+
+text-h2()
+  font-family header-font-stack
+  font-size 24px
+  font-weight bold
+  line-height 28px
+  +above(tablet)
+    font-size 36px
+    line-height 40px
+
+text-h3()
+  color salmon-color
+  font-family font-stack
+  font-size 16px
+  font-style italic
+  letter-spacing -0.3px
+  line-height 24px
+
+text-body()
+  font-family font-stack
+  font-size 17px
+  line-height 22px
+  +above(tablet)
+    font-size 20px
+    line-height 31px
+
+text-small()
+  font-family font-stack
+  +above(tablet)
+    font-size 16px
+    line-height 24px
+
+nav-padding-size(page-padding)
+  if page-padding >= desktop-padding
+    desktop-padding
+  else
+    page-padding + page-padding * 2 + logo-size
+
+size-ratio(w, h)
+  &::before
+    content ""
+    display block
+    padding-top (h/w) * 100%
+
+nav-padding()
+  +below(tablet)
+    padding-top nav-padding-size(mobile-padding)
+  +above(tablet)
+    padding-top nav-padding-size(tablet-padding)
+  +above(desktop)
+    padding-top nav-padding-size(desktop-padding)
+
+// Provide a controlled replacement for text-decoration: underline
+underline(color, hover-color, size = 0.03em, offset = 0.14em)
+  end = offset + size
+  background-image linear-gradient(to top, transparent, transparent offset, color offset, color end, transparent end)
+  text-decoration none
+  &:hover
+    background-image linear-gradient(to top, transparent, transparent offset, hover-color offset, hover-color end, transparent end)
