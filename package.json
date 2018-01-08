@@ -1,6 +1,6 @@
 {
-  "name": "bek.is",
-  "author": "Zak Johnson <me@zakj.net>",
+  "name": "Nicholas.X",
+  "author": "Nicholas Xu <admin@tichx.com>",
   "private": true,
   "scripts": {
     "dev": "HOST=0.0.0.0 nuxt",
