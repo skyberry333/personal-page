@@ -8,6 +8,7 @@
       <span>·</span>
       <a href="https://www.instagram.com/5.8ft/" target="_blank">Instagram</a>
     </p>
+    <p><em>Site magic by <a href="https://github.com/skyberry333" target="_blank">@Nicholas</a></em></p>
   </div>
 </template>
 

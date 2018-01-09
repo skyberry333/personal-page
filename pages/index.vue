@@ -38,12 +38,12 @@
               src="/mood/night.jpg"
               alt="My hometown's night view. Nicholas Xu → http://tichx.com"
             />
-            <MoodImage :scroll-at=".8"
+            <MoodImage :scroll-at="1.1"
               defer-load
               src="/mood/surf.jpg"
               alt="Irvine beach. Nicholas Xu → http://tichx.com"
             />
-            <MoodImage orientation="landscape" :offset="20"
+            <MoodImage orientation="landscape" :offset="20" :scroll-at="1.3"
               defer-load
               src="/mood/singapore.jpg"
               alt="Trip to Singapore with rommate. Nicholas Xu → http://tichx.com"
