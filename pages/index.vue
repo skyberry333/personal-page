@@ -48,7 +48,7 @@
               src="/mood/singapore.jpg"
               alt="Trip to Singapore with rommate. Nicholas Xu → http://tichx.com"
             />
-            <MoodImage orientation="landscape" size="small" :nopin="true"
+            <MoodImage orientation="landscape" size="small"  :offset="-30.6" :scroll-at="1.3"
               defer-load
               src="/mood/stamp.png"
             />
