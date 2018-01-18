@@ -2,7 +2,13 @@
   "name": "Nicholas.X",
   "author": "Nicholas Xu <admin@tichx.com>",
   "private": true,
-  "scripts": {
+  "config": {
+   "nuxt": {
+    "host": "0.0.0.0",
+    "port": "8080"
+ }
+},
+"scripts": {
     "dev": "HOST=0.0.0.0 nuxt",
     "build": "nuxt build",
     "analyze": "nuxt build --analyze",

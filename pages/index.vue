@@ -61,7 +61,7 @@
           # Hello.
 
           I’m Nicholas Xu, a Instagram photographer and an undergrad at the university
-          of Washington passinoate about computer science. I also travel at least
+          of Washington passionate about computer science. I also travel at least
           few times a year, so may I call my self an experience connoisseur.
 
           My time are divided by three focuses, school, side projects like this website, and
